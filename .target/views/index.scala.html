@@ -1,0 +1,17 @@
+@(message: String)
+
+@main("Welcome to Play 2.1") {
+    
+   @message
+   <script src="@routes.Assets.at("javascripts/index.js")" type="text/javascript"></script>
+  
+   <ul id="articles"></ul>
+   
+   <form action="@routes.Application.addArticle()" method="post">
+   	<p> Article Title: </p> <input name="title">
+   	<p> Article Description:<br/>
+   	<textarea name="description"></textarea><br/>
+   	<input type="submit">
+   </form>
+    
+}
